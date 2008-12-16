@@ -1,0 +1,16 @@
+<weather_forcast>
+	<high_temps>
+		<monday>88</monday>
+		<tuesday>87</tuesday>
+		<wednesday>81</wednesday>
+		<thursday>85</thursday>
+		<friday>90</friday>
+	</high_temps>
+	<low_temps>
+		<monday>55</monday>
+		<tuesday>56</tuesday>
+		<wednesday>54</wednesday>
+		<thursday>52</thursday>
+		<friday>60</friday>
+	</low_temps>
+</weather_forcast>

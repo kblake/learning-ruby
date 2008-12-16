@@ -1,0 +1,470 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>rubyisms.rb</title>
+	<style type="text/css">
+/* Stylesheet generated from TextMate theme
+ *
+ * Vibrant Ink
+ * 
+ *
+ */
+
+/* Mostly to improve view within the TextMate HTML viewer */
+body {
+	margin: 0;
+	padding: 0;
+}
+
+pre.textmate-source {
+	margin: 0;
+	padding: 0 0 0 2px;
+	font-family: Monaco, monospace;
+	font-size: 14px;
+	line-height: 1.3em;
+	word-wrap: break-word;
+	white-space: pre;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -o-pre-wrap;
+}
+
+pre.textmate-source.vibrant_ink {
+	color: #FFFFFF;
+	background-color: #000000;
+}
+
+pre.textmate-source .linenum {
+	width: 75px;
+	padding: 0.1em 1em 0.2em 0;
+	color: #888;
+	background-color: #eee;
+}
+pre.textmate-source.vibrant_ink span {
+   padding-top: 0.2em;
+   padding-bottom: 0.1em;
+}
+pre.textmate-source.vibrant_ink ::selection {
+	background-color: rgba(53, 73, 60, 0.88);
+}
+/* Text base */
+pre.textmate-source.vibrant_ink .text {
+	color: #FFFFFF;
+	background-color: #0F0F0F;
+}
+
+/* Inline Ruby Html */
+pre.textmate-source.vibrant_ink .source_ruby_rails_embedded_html {
+	background-color: #000000;
+}
+
+/* Ruby Html */
+pre.textmate-source.vibrant_ink .text_html_ruby {
+	color: #FFFFFF;
+	background-color: #101010;
+}
+
+/* Ruby Number */
+pre.textmate-source.vibrant_ink .constant_numeric_ruby {
+	color: #CCFF33;
+}
+
+/* Ruby source */
+pre.textmate-source.vibrant_ink .source_ruby {
+}
+
+/* Source base */
+pre.textmate-source.vibrant_ink .source {
+	color: #FFFFFF;
+	background-color: #000000;
+}
+
+/* Comment */
+pre.textmate-source.vibrant_ink .comment {
+	color: #9933CC;
+}
+
+/* Constant */
+pre.textmate-source.vibrant_ink .constant {
+	color: #339999;
+}
+
+/* Keyword */
+pre.textmate-source.vibrant_ink .keyword {
+	color: #FF6600;
+}
+
+/* Pre-processor Line */
+pre.textmate-source.vibrant_ink .keyword_preprocessor {
+	color: #EDF8F9;
+}
+
+/* Pre-processor Directive */
+pre.textmate-source.vibrant_ink .keyword_preprocessor .directive {
+	color: #FFFFFF;
+}
+
+/* Function name */
+pre.textmate-source.vibrant_ink .entity_name_function, pre.textmate-source.vibrant_ink .storage_type_function_js {
+	color: #FFCC00;
+}
+
+/* Function argument */
+pre.textmate-source.vibrant_ink .variable_parameter {
+	font-style: italic;
+}
+
+/* Block comment */
+pre.textmate-source.vibrant_ink .source .comment_block {
+	color: #772CB7;
+	background-color: #070707;
+}
+
+/* Variable */
+pre.textmate-source.vibrant_ink .variable_other {
+	color: #FFFFFF;
+}
+
+/* ActiveRecord Function */
+pre.textmate-source.vibrant_ink .support_function_activerecord_rails {
+	color: #999966;
+}
+
+/* String */
+pre.textmate-source.vibrant_ink .string {
+	color: #66FF00;
+}
+
+/* String escapes */
+pre.textmate-source.vibrant_ink .string .constant_character_escape {
+	color: #AAAAAA;
+}
+
+/* String (executed) */
+pre.textmate-source.vibrant_ink .string_interpolated {
+	color: #000000;
+	background-color: #CCCC33;
+}
+
+/* Regular expression */
+pre.textmate-source.vibrant_ink .string_regexp {
+	color: #44B4CC;
+}
+
+/* String (literal) */
+pre.textmate-source.vibrant_ink .string_literal {
+	color: #CCCC33;
+}
+
+/* String escapes (executed) */
+pre.textmate-source.vibrant_ink .string_interpolated .constant_character_escape {
+	color: #555555;
+}
+
+/* Class name */
+pre.textmate-source.vibrant_ink .entity_name_class, pre.textmate-source.vibrant_ink .support_class_js {
+	text-decoration: underline;
+}
+
+/* Class inheritance */
+pre.textmate-source.vibrant_ink .entity_other_inherited-class {
+	font-style: italic;
+	text-decoration: underline;
+}
+
+/* Tag name */
+pre.textmate-source.vibrant_ink .entity_name_tag {
+}
+
+/* Html Meta */
+pre.textmate-source.vibrant_ink .meta_tag_inline_any_html, pre.textmate-source.vibrant_ink . .meta_tag_block_any_html {
+	color: #FF6600;
+}
+
+/* Tag attribute */
+pre.textmate-source.vibrant_ink .entity_other_attribute-name {
+	color: #99CC99;
+	font-style: italic;
+}
+
+/* Other Keywords */
+pre.textmate-source.vibrant_ink .keyword_other {
+	color: #DDE93D;
+}
+
+/* CSS Selector */
+pre.textmate-source.vibrant_ink .meta_selector_css, pre.textmate-source.vibrant_ink .entity_other_attribute-name_pseudo-class_css, pre.textmate-source.vibrant_ink .entity_name_tag_wildcard_css, pre.textmate-source.vibrant_ink .entity_other_attribute-name_id_css, pre.textmate-source.vibrant_ink .entity_other_attribute-name_class_css {
+	color: #FF6600;
+}
+
+/* CSS Property */
+pre.textmate-source.vibrant_ink .support_type_property-name_css {
+	color: #999966;
+}
+
+/* CSS Other */
+pre.textmate-source.vibrant_ink .keyword_other_unit_css, pre.textmate-source.vibrant_ink .constant_other_rgb-value_css, pre.textmate-source.vibrant_ink .constant_numeric_css {
+	color: #FFFFFF;
+}
+
+/* Javascript Events */
+pre.textmate-source.vibrant_ink .support_function_event-handler_js {
+	color: #FFFFFF;
+}
+
+/* Javascript Operators */
+pre.textmate-source.vibrant_ink .keyword_operator_js {
+	color: #FFFFFF;
+}
+
+/* Javascript Keywords */
+pre.textmate-source.vibrant_ink .keyword_control_js {
+	color: #CCCC66;
+}
+
+/* Prototype Objects */
+pre.textmate-source.vibrant_ink .support_class_prototype_js {
+	color: #FFFFFF;
+}
+
+/* Prototype Methods */
+pre.textmate-source.vibrant_ink .object_property_function_prototype_js {
+	color: #FF6600;
+}
+
+
+
+	</style>
+</head>
+
+<body><pre class="textmate-source vibrant_ink"><span class='linenum'>    1</span> <span class="source source_ruby source_ruby_rails"><span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>RUBYISMS
+</span><span class='linenum'>    2</span> 
+<span class='linenum'>    3</span> a <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> b<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>foo
+<span class='linenum'>    4</span> <span class="keyword keyword_control keyword_control_ruby">if</span> a<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>empty?
+<span class='linenum'>    5</span>   a <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> b<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>bar
+<span class='linenum'>    6</span> <span class="keyword keyword_control keyword_control_ruby">else</span>
+<span class='linenum'>    7</span>   a<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>reverse!
+<span class='linenum'>    8</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>    9</span> 
+<span class='linenum'>   10</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>can be simplied a little by assigning and 
+</span><span class='linenum'>   11</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>checking returned boolean type
+</span><span class='linenum'>   12</span> 
+<span class='linenum'>   13</span> <span class="keyword keyword_control keyword_control_ruby">if</span> <span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">(</span>a <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> b<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>foo<span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">)</span><span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>empty?
+<span class='linenum'>   14</span>   a <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> b<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>bar
+<span class='linenum'>   15</span> <span class="keyword keyword_control keyword_control_ruby">else</span>
+<span class='linenum'>   16</span>   a<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>reverse!
+<span class='linenum'>   17</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>   18</span> 
+<span class='linenum'>   19</span> <span class="keyword keyword_operator keyword_operator_arithmetic keyword_operator_arithmetic_ruby">-----------------------------------------------</span>
+<span class='linenum'>   20</span> 
+<span class='linenum'>   21</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>check the most obvious case first in conditions
+</span><span class='linenum'>   22</span> <span class="keyword keyword_control keyword_control_ruby">case</span> savings_account
+<span class='linenum'>   23</span> <span class="keyword keyword_control keyword_control_ruby">when</span> <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>not much<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>
+<span class='linenum'>   24</span>   buy_bike
+<span class='linenum'>   25</span> <span class="keyword keyword_control keyword_control_ruby">when</span> <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>some dough<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>
+<span class='linenum'>   26</span>   buy_yugo
+<span class='linenum'>   27</span> <span class="keyword keyword_control keyword_control_ruby">when</span> <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>a good wad in the wallet<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>
+<span class='linenum'>   28</span>   buy_toyota
+<span class='linenum'>   29</span> <span class="keyword keyword_control keyword_control_ruby">when</span> <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>just won the lottery<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>
+<span class='linenum'>   30</span>   buy_dream_car
+<span class='linenum'>   31</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>   32</span> 
+<span class='linenum'>   33</span> <span class="keyword keyword_operator keyword_operator_arithmetic keyword_operator_arithmetic_ruby">-----------------------------------------------</span>
+<span class='linenum'>   34</span> 
+<span class='linenum'>   35</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>not good
+</span><span class='linenum'>   36</span> breakfast <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> <span class="constant constant_language constant_language_ruby">nil</span>
+<span class='linenum'>   37</span> <span class="keyword keyword_control keyword_control_ruby">if</span> breakfeast <span class="keyword keyword_operator keyword_operator_comparison keyword_operator_comparison_ruby">==</span> <span class="constant constant_language constant_language_ruby">nil</span>
+<span class='linenum'>   38</span>   breakfast <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>bacon and egss<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>
+<span class='linenum'>   39</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>   40</span> 
+<span class='linenum'>   41</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>not bad
+</span><span class='linenum'>   42</span> <span class="keyword keyword_control keyword_control_ruby">if</span> breakfast<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>nil?
+<span class='linenum'>   43</span>   breakfast <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>bacon and eggs<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>
+<span class='linenum'>   44</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>   45</span> 
+<span class='linenum'>   46</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>pretty cool
+</span><span class='linenum'>   47</span> <span class="keyword keyword_control keyword_control_ruby">if</span> <span class="keyword keyword_operator keyword_operator_logical keyword_operator_logical_ruby">!</span>breakfast
+<span class='linenum'>   48</span>   breakfast <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>bacon and eggs<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>
+<span class='linenum'>   49</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>   50</span> 
+<span class='linenum'>   51</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span> if !something is the same as unless something
+</span><span class='linenum'>   52</span> <span class="keyword keyword_control keyword_control_ruby">unless</span> breakfeast
+<span class='linenum'>   53</span>   breakfast <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>bacon and eggs<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>
+<span class='linenum'>   54</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>   55</span> 
+<span class='linenum'>   56</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>can it get better?  awww yea!
+</span><span class='linenum'>   57</span> breakfast <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>bacon and eggs<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span> <span class="keyword keyword_control keyword_control_ruby">unless</span> breakfast
+<span class='linenum'>   58</span> 
+<span class='linenum'>   59</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>even better???!!!
+</span><span class='linenum'>   60</span> breakfast <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_augmented keyword_operator_assignment_augmented_ruby">||=</span> <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>bacon and eggs<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>
+<span class='linenum'>   61</span> 
+<span class='linenum'>   62</span> <span class="keyword keyword_operator keyword_operator_arithmetic keyword_operator_arithmetic_ruby">-----------------------------------------------</span>
+<span class='linenum'>   63</span> 
+<span class='linenum'>   64</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>too much work, ugh!
+</span><span class='linenum'>   65</span> val <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> <span class="constant constant_numeric constant_numeric_ruby">12</span>
+<span class='linenum'>   66</span> <span class="keyword keyword_control keyword_control_ruby">if</span> val <span class="keyword keyword_operator keyword_operator_comparison keyword_operator_comparison_ruby">==</span> <span class="constant constant_numeric constant_numeric_ruby">1</span> <span class="keyword keyword_operator keyword_operator_logical keyword_operator_logical_ruby">||</span> val <span class="keyword keyword_operator keyword_operator_comparison keyword_operator_comparison_ruby">==</span> <span class="constant constant_numeric constant_numeric_ruby">12</span> <span class="keyword keyword_operator keyword_operator_logical keyword_operator_logical_ruby">||</span> val <span class="keyword keyword_operator keyword_operator_comparison keyword_operator_comparison_ruby">==</span> <span class="constant constant_numeric constant_numeric_ruby">42</span>
+<span class='linenum'>   67</span>   puts <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>woo hoo!<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>
+<span class='linenum'>   68</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>   69</span> 
+<span class='linenum'>   70</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>sweetness
+</span><span class='linenum'>   71</span> <span class="keyword keyword_control keyword_control_ruby">if</span> <span class="punctuation punctuation_section punctuation_section_array punctuation_section_array_ruby">[</span><span class="constant constant_numeric constant_numeric_ruby">1</span><span class="punctuation punctuation_separator punctuation_separator_object punctuation_separator_object_ruby">,</span><span class="constant constant_numeric constant_numeric_ruby">12</span><span class="punctuation punctuation_separator punctuation_separator_object punctuation_separator_object_ruby">,</span><span class="constant constant_numeric constant_numeric_ruby">42</span><span class="punctuation punctuation_section punctuation_section_array punctuation_section_array_ruby">]</span><span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>include?<span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">(</span>val<span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">)</span>
+<span class='linenum'>   72</span>   puts <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>woo hoo!<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>
+<span class='linenum'>   73</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>   74</span> 
+<span class='linenum'>   75</span> <span class="keyword keyword_operator keyword_operator_arithmetic keyword_operator_arithmetic_ruby">-----------------------------------------------</span>
+<span class='linenum'>   76</span> 
+<span class='linenum'>   77</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>only include value if it is not present in array
+</span><span class='linenum'>   78</span> 
+<span class='linenum'>   79</span> fruits <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> <span class="punctuation punctuation_section punctuation_section_array punctuation_section_array_ruby">[</span><span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>apple<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span><span class="punctuation punctuation_separator punctuation_separator_object punctuation_separator_object_ruby">,</span><span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>banana<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span><span class="punctuation punctuation_section punctuation_section_array punctuation_section_array_ruby">]</span>
+<span class='linenum'>   80</span> 
+<span class='linenum'>   81</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>ouch
+</span><span class='linenum'>   82</span> fruits <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_augmented keyword_operator_assignment_augmented_ruby">&lt;&lt;</span> <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>apple<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span> <span class="keyword keyword_control keyword_control_ruby">unless</span> fruits<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>include?<span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">(</span><span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>apple<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span><span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">)</span>
+<span class='linenum'>   83</span> 
+<span class='linenum'>   84</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>better
+</span><span class='linenum'>   85</span> fruits <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_augmented keyword_operator_assignment_augmented_ruby">|=</span> <span class="punctuation punctuation_section punctuation_section_array punctuation_section_array_ruby">[</span><span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>apple<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span><span class="punctuation punctuation_section punctuation_section_array punctuation_section_array_ruby">]</span>
+<span class='linenum'>   86</span> 
+<span class='linenum'>   87</span> <span class="keyword keyword_operator keyword_operator_arithmetic keyword_operator_arithmetic_ruby">-----------------------------------------------</span>
+<span class='linenum'>   88</span> 
+<span class='linenum'>   89</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>a lot of work
+</span><span class='linenum'>   90</span> user_id <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> <span class="constant constant_language constant_language_ruby">nil</span>
+<span class='linenum'>   91</span> <span class="keyword keyword_control keyword_control_ruby">if</span> comments
+<span class='linenum'>   92</span>   <span class="keyword keyword_control keyword_control_ruby">if</span> comments<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>first
+<span class='linenum'>   93</span>     <span class="keyword keyword_control keyword_control_ruby">if</span> comments<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>first<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>user
+<span class='linenum'>   94</span>       user_id <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> comments<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>first<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>user<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>id
+<span class='linenum'>   95</span>     <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>   96</span>   <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>   97</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>   98</span> 
+<span class='linenum'>   99</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>are they really paying me to do this
+</span><span class='linenum'>  100</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>evaluate logic from left to right, returning last value executed
+</span><span class='linenum'>  101</span> user_id <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> comments <span class="keyword keyword_operator keyword_operator_logical keyword_operator_logical_ruby">&amp;&amp;</span> comments<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>first <span class="keyword keyword_operator keyword_operator_logical keyword_operator_logical_ruby">&amp;&amp;</span> comments<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>first<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>user <span class="keyword keyword_operator keyword_operator_logical keyword_operator_logical_ruby">&amp;&amp;</span> comments<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>first<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>user<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>id
+<span class='linenum'>  102</span> 
+<span class='linenum'>  103</span> <span class="keyword keyword_operator keyword_operator_arithmetic keyword_operator_arithmetic_ruby">-----------------------------------------------</span>
+<span class='linenum'>  104</span> 
+<span class='linenum'>  105</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>return values from methods
+</span><span class='linenum'>  106</span> <span class="meta meta_function meta_function_method meta_function_method_with-arguments meta_function_method_with-arguments_ruby"><span class="keyword keyword_control keyword_control_def keyword_control_def_ruby">def</span> <span class="entity entity_name entity_name_function entity_name_function_ruby">say_goodnight</span><span class="punctuation punctuation_definition punctuation_definition_parameters punctuation_definition_parameters_ruby">(</span><span class="variable variable_parameter variable_parameter_function variable_parameter_function_ruby">name</span><span class="punctuation punctuation_definition punctuation_definition_parameters punctuation_definition_parameters_ruby">)</span></span>
+<span class='linenum'>  107</span>   result <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>Good night, <span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span> <span class="keyword keyword_operator keyword_operator_arithmetic keyword_operator_arithmetic_ruby">+</span> name<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>capitalize
+<span class='linenum'>  108</span>   <span class="keyword keyword_control keyword_control_pseudo-method keyword_control_pseudo-method_ruby">return</span> result
+<span class='linenum'>  109</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>  110</span> 
+<span class='linenum'>  111</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>rubyized
+</span><span class='linenum'>  112</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>remember last value of method gets returned by default
+</span><span class='linenum'>  113</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>use interpolated values instead of concatenating
+</span><span class='linenum'>  114</span> <span class="meta meta_function meta_function_method meta_function_method_with-arguments meta_function_method_with-arguments_ruby"><span class="keyword keyword_control keyword_control_def keyword_control_def_ruby">def</span> <span class="entity entity_name entity_name_function entity_name_function_ruby">say_goodnight</span><span class="punctuation punctuation_definition punctuation_definition_parameters punctuation_definition_parameters_ruby">(</span><span class="variable variable_parameter variable_parameter_function variable_parameter_function_ruby">name</span><span class="punctuation punctuation_definition punctuation_definition_parameters punctuation_definition_parameters_ruby">)</span></span>
+<span class='linenum'>  115</span>   <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>Good night, <span class="source source_ruby source_ruby_embedded source_ruby_embedded_source"><span class="punctuation punctuation_section punctuation_section_embedded punctuation_section_embedded_ruby">#{</span>name<span class="punctuation punctuation_separator punctuation_separator_object punctuation_separator_object_ruby">,</span>capitalize<span class="punctuation punctuation_section punctuation_section_embedded punctuation_section_embedded_ruby">}</span></span><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>
+<span class='linenum'>  116</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>  117</span> 
+<span class='linenum'>  118</span> <span class="keyword keyword_operator keyword_operator_arithmetic keyword_operator_arithmetic_ruby">-----------------------------------------------</span>
+<span class='linenum'>  119</span> 
+<span class='linenum'>  120</span> <span class="meta meta_function meta_function_method meta_function_method_with-arguments meta_function_method_with-arguments_ruby"><span class="keyword keyword_control keyword_control_def keyword_control_def_ruby">def</span> <span class="entity entity_name entity_name_function entity_name_function_ruby">old_enough?</span><span class="punctuation punctuation_definition punctuation_definition_parameters punctuation_definition_parameters_ruby">(</span><span class="variable variable_parameter variable_parameter_function variable_parameter_function_ruby">age</span><span class="punctuation punctuation_definition punctuation_definition_parameters punctuation_definition_parameters_ruby">)</span></span>
+<span class='linenum'>  121</span>   <span class="keyword keyword_control keyword_control_ruby">if</span> age <span class="keyword keyword_operator keyword_operator_comparison keyword_operator_comparison_ruby">&gt;</span> <span class="constant constant_numeric constant_numeric_ruby">15</span>
+<span class='linenum'>  122</span>     <span class="constant constant_language constant_language_ruby">true</span>
+<span class='linenum'>  123</span>   <span class="keyword keyword_control keyword_control_ruby">else</span>
+<span class='linenum'>  124</span>     <span class="constant constant_language constant_language_ruby">false</span>
+<span class='linenum'>  125</span>   <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>  126</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>  127</span> 
+<span class='linenum'>  128</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>would be better written as
+</span><span class='linenum'>  129</span> <span class="meta meta_function meta_function_method meta_function_method_with-arguments meta_function_method_with-arguments_ruby"><span class="keyword keyword_control keyword_control_def keyword_control_def_ruby">def</span> <span class="entity entity_name entity_name_function entity_name_function_ruby">old_enough?</span><span class="punctuation punctuation_definition punctuation_definition_parameters punctuation_definition_parameters_ruby">(</span><span class="variable variable_parameter variable_parameter_function variable_parameter_function_ruby">age</span><span class="punctuation punctuation_definition punctuation_definition_parameters punctuation_definition_parameters_ruby">)</span></span>
+<span class='linenum'>  130</span>   age <span class="keyword keyword_operator keyword_operator_comparison keyword_operator_comparison_ruby">&gt;</span> <span class="constant constant_numeric constant_numeric_ruby">15</span>
+<span class='linenum'>  131</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>  132</span> 
+<span class='linenum'>  133</span> <span class="keyword keyword_operator keyword_operator_arithmetic keyword_operator_arithmetic_ruby">-----------------------------------------------</span>
+<span class='linenum'>  134</span> 
+<span class='linenum'>  135</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>Classes getters/setters
+</span><span class='linenum'>  136</span> 
+<span class='linenum'>  137</span> <span class="meta meta_class meta_class_ruby"><span class="keyword keyword_control keyword_control_class keyword_control_class_ruby">class</span> <span class="entity entity_name entity_name_type entity_name_type_class entity_name_type_class_ruby">Person</span></span>
+<span class='linenum'>  138</span>   <span class="meta meta_function meta_function_method meta_function_method_with-arguments meta_function_method_with-arguments_ruby"><span class="keyword keyword_control keyword_control_def keyword_control_def_ruby">def</span> <span class="entity entity_name entity_name_function entity_name_function_ruby">initialize</span><span class="punctuation punctuation_definition punctuation_definition_parameters punctuation_definition_parameters_ruby">(</span><span class="variable variable_parameter variable_parameter_function variable_parameter_function_ruby">name</span><span class="punctuation punctuation_definition punctuation_definition_parameters punctuation_definition_parameters_ruby">)</span></span>
+<span class='linenum'>  139</span>     <span class="variable variable_other variable_other_readwrite variable_other_readwrite_instance variable_other_readwrite_instance_ruby"><span class="punctuation punctuation_definition punctuation_definition_variable punctuation_definition_variable_ruby">@</span>name</span> <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> name
+<span class='linenum'>  140</span>   <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>  141</span>   <span class="meta meta_function meta_function_method meta_function_method_without-arguments meta_function_method_without-arguments_ruby"><span class="keyword keyword_control keyword_control_def keyword_control_def_ruby">def</span> <span class="entity entity_name entity_name_function entity_name_function_ruby">name</span></span>
+<span class='linenum'>  142</span>     <span class="variable variable_other variable_other_readwrite variable_other_readwrite_instance variable_other_readwrite_instance_ruby"><span class="punctuation punctuation_definition punctuation_definition_variable punctuation_definition_variable_ruby">@</span>name</span>
+<span class='linenum'>  143</span>   <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>  144</span>   <span class="meta meta_function meta_function_method meta_function_method_with-arguments meta_function_method_with-arguments_ruby"><span class="keyword keyword_control keyword_control_def keyword_control_def_ruby">def</span> <span class="entity entity_name entity_name_function entity_name_function_ruby">name=</span><span class="punctuation punctuation_definition punctuation_definition_parameters punctuation_definition_parameters_ruby">(</span><span class="variable variable_parameter variable_parameter_function variable_parameter_function_ruby">name</span><span class="punctuation punctuation_definition punctuation_definition_parameters punctuation_definition_parameters_ruby">)</span></span>
+<span class='linenum'>  145</span>     <span class="variable variable_other variable_other_readwrite variable_other_readwrite_instance variable_other_readwrite_instance_ruby"><span class="punctuation punctuation_definition punctuation_definition_variable punctuation_definition_variable_ruby">@</span>name</span> <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> name
+<span class='linenum'>  146</span>   <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>  147</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>  148</span> 
+<span class='linenum'>  149</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>use attr_accessor to do the same thing, sweetness!
+</span><span class='linenum'>  150</span> <span class="meta meta_class meta_class_ruby"><span class="keyword keyword_control keyword_control_class keyword_control_class_ruby">class</span> <span class="entity entity_name entity_name_type entity_name_type_class entity_name_type_class_ruby">Person</span></span>
+<span class='linenum'>  151</span>   <span class="keyword keyword_other keyword_other_special-method keyword_other_special-method_ruby">attr_accessor</span> <span class="constant constant_other constant_other_symbol constant_other_symbol_ruby"><span class="punctuation punctuation_definition punctuation_definition_constant punctuation_definition_constant_ruby">:</span>name</span>
+<span class='linenum'>  152</span>   <span class="meta meta_function meta_function_method meta_function_method_with-arguments meta_function_method_with-arguments_ruby"><span class="keyword keyword_control keyword_control_def keyword_control_def_ruby">def</span> <span class="entity entity_name entity_name_function entity_name_function_ruby">initialize</span><span class="punctuation punctuation_definition punctuation_definition_parameters punctuation_definition_parameters_ruby">(</span><span class="variable variable_parameter variable_parameter_function variable_parameter_function_ruby">name</span><span class="punctuation punctuation_definition punctuation_definition_parameters punctuation_definition_parameters_ruby">)</span></span>
+<span class='linenum'>  153</span>     <span class="variable variable_other variable_other_readwrite variable_other_readwrite_instance variable_other_readwrite_instance_ruby"><span class="punctuation punctuation_definition punctuation_definition_variable punctuation_definition_variable_ruby">@</span>name</span> <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> name
+<span class='linenum'>  154</span>   <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>  155</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>  156</span> 
+<span class='linenum'>  157</span> <span class="keyword keyword_operator keyword_operator_arithmetic keyword_operator_arithmetic_ruby">-----------------------------------------------</span>
+<span class='linenum'>  158</span> 
+<span class='linenum'>  159</span> a <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> <span class="punctuation punctuation_section punctuation_section_array punctuation_section_array_ruby">[</span> <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>ant<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span><span class="punctuation punctuation_separator punctuation_separator_object punctuation_separator_object_ruby">,</span> <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>bee<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span><span class="punctuation punctuation_separator punctuation_separator_object punctuation_separator_object_ruby">,</span> <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>cat<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span><span class="punctuation punctuation_separator punctuation_separator_object punctuation_separator_object_ruby">,</span> <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>dog<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span><span class="punctuation punctuation_separator punctuation_separator_object punctuation_separator_object_ruby">,</span> <span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>elk<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span> <span class="punctuation punctuation_section punctuation_section_array punctuation_section_array_ruby">]</span>
+<span class='linenum'>  160</span> 
+<span class='linenum'>  161</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>sometimes its easier to create this array alternatively like this
+</span><span class='linenum'>  162</span> a <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> <span class="string string_quoted string_quoted_other string_quoted_other_literal string_quoted_other_literal_lower string_quoted_other_literal_lower_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">%w{</span> ant bee cat dog elk <span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">}</span></span>
+<span class='linenum'>  163</span> 
+<span class='linenum'>  164</span> <span class="keyword keyword_operator keyword_operator_arithmetic keyword_operator_arithmetic_ruby">-----------------------------------------------</span>
+<span class='linenum'>  165</span> 
+<span class='linenum'>  166</span> <span class="keyword keyword_control keyword_control_ruby">for</span> i <span class="keyword keyword_control keyword_control_ruby">in</span> <span class="constant constant_numeric constant_numeric_ruby">0</span><span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">..</span><span class="constant constant_numeric constant_numeric_ruby">9</span>
+<span class='linenum'>  167</span>   puts i<span class="punctuation punctuation_separator punctuation_separator_object punctuation_separator_object_ruby">,</span> <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span> <span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>
+<span class='linenum'>  168</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>  169</span> 
+<span class='linenum'>  170</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>this is so much cooler!
+</span><span class='linenum'>  171</span> <span class="constant constant_numeric constant_numeric_ruby">10</span><span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>times <span class="punctuation punctuation_section punctuation_section_scope punctuation_section_scope_ruby">{</span><span class="punctuation punctuation_separator punctuation_separator_variable punctuation_separator_variable_ruby">|</span><span class="variable variable_other variable_other_block variable_other_block_ruby">i</span><span class="punctuation punctuation_separator punctuation_separator_variable punctuation_separator_variable_ruby">|</span> puts i<span class="punctuation punctuation_section punctuation_section_scope punctuation_section_scope_ruby">}</span>
+<span class='linenum'>  172</span> 
+<span class='linenum'>  173</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>don't forget other iterators like upto, downto, and step
+</span><span class='linenum'>  174</span> 
+<span class='linenum'>  175</span> <span class="keyword keyword_operator keyword_operator_arithmetic keyword_operator_arithmetic_ruby">-----------------------------------------------</span>
+<span class='linenum'>  176</span> 
+<span class='linenum'>  177</span> people <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> array of people<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">...</span>
+<span class='linenum'>  178</span> 
+<span class='linenum'>  179</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>PAINFULL!!
+</span><span class='linenum'>  180</span> i <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> <span class="constant constant_numeric constant_numeric_ruby">0</span>
+<span class='linenum'>  181</span> <span class="keyword keyword_control keyword_control_ruby">while</span> i <span class="keyword keyword_operator keyword_operator_comparison keyword_operator_comparison_ruby">&lt;</span> people<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>size
+<span class='linenum'>  182</span>   puts people<span class="punctuation punctuation_section punctuation_section_array punctuation_section_array_ruby">[</span>i<span class="punctuation punctuation_section punctuation_section_array punctuation_section_array_ruby">]</span><span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>name
+<span class='linenum'>  183</span>   i <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_augmented keyword_operator_assignment_augmented_ruby">+=</span> <span class="constant constant_numeric constant_numeric_ruby">1</span>
+<span class='linenum'>  184</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>  185</span> 
+<span class='linenum'>  186</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>LESS PAINFUL!
+</span><span class='linenum'>  187</span> <span class="keyword keyword_control keyword_control_ruby">for</span> i <span class="keyword keyword_control keyword_control_ruby">in</span> <span class="constant constant_numeric constant_numeric_ruby">0</span><span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">..</span>people<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>size
+<span class='linenum'>  188</span>   puts people<span class="punctuation punctuation_section punctuation_section_array punctuation_section_array_ruby">[</span>i<span class="punctuation punctuation_section punctuation_section_array punctuation_section_array_ruby">]</span><span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>name
+<span class='linenum'>  189</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>  190</span> 
+<span class='linenum'>  191</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>rubyize it by using the each iterator
+</span><span class='linenum'>  192</span> people<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>each <span class="punctuation punctuation_section punctuation_section_scope punctuation_section_scope_ruby">{</span><span class="meta meta_syntax meta_syntax_ruby meta_syntax_ruby_start-block"> </span><span class="punctuation punctuation_separator punctuation_separator_variable punctuation_separator_variable_ruby">|</span><span class="variable variable_other variable_other_block variable_other_block_ruby">person</span><span class="punctuation punctuation_separator punctuation_separator_variable punctuation_separator_variable_ruby">|</span> puts person<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>name <span class="punctuation punctuation_section punctuation_section_scope punctuation_section_scope_ruby">}</span>
+<span class='linenum'>  193</span> 
+<span class='linenum'>  194</span> <span class="keyword keyword_operator keyword_operator_arithmetic keyword_operator_arithmetic_ruby">-----------------------------------------------</span>
+<span class='linenum'>  195</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>call makes 26 calls for each letter everytime 
+</span><span class='linenum'>  196</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>capital_letters method is called
+</span><span class='linenum'>  197</span> <span class="meta meta_function meta_function_method meta_function_method_without-arguments meta_function_method_without-arguments_ruby"><span class="keyword keyword_control keyword_control_def keyword_control_def_ruby">def</span> <span class="entity entity_name entity_name_function entity_name_function_ruby">capital_letters</span></span>
+<span class='linenum'>  198</span>   <span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">(</span><span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>A<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span><span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">..</span><span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>Z<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span><span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">)</span><span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>to_a
+<span class='linenum'>  199</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>  200</span> 
+<span class='linenum'>  201</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>instead, creating a class variable caches the to_a in memory
+</span><span class='linenum'>  202</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>the method call uses cached value
+</span><span class='linenum'>  203</span> <span class="variable variable_other variable_other_readwrite variable_other_readwrite_class variable_other_readwrite_class_ruby"><span class="punctuation punctuation_definition punctuation_definition_variable punctuation_definition_variable_ruby">@@</span>capital_letters</span><span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span><span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">(</span><span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>A<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span><span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">..</span><span class="string string_quoted string_quoted_single string_quoted_single_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">'</span>Z<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">'</span></span><span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">)</span><span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>to_a
+<span class='linenum'>  204</span> <span class="meta meta_function meta_function_method meta_function_method_without-arguments meta_function_method_without-arguments_ruby"><span class="keyword keyword_control keyword_control_def keyword_control_def_ruby">def</span> <span class="entity entity_name entity_name_function entity_name_function_ruby">capital_letters</span></span>
+<span class='linenum'>  205</span>   <span class="variable variable_other variable_other_readwrite variable_other_readwrite_class variable_other_readwrite_class_ruby"><span class="punctuation punctuation_definition punctuation_definition_variable punctuation_definition_variable_ruby">@@</span>capital_letters</span>
+<span class='linenum'>  206</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>  207</span> 
+<span class='linenum'>  208</span> <span class="keyword keyword_operator keyword_operator_arithmetic keyword_operator_arithmetic_ruby">-----------------------------------------------</span>
+<span class='linenum'>  209</span> 
+<span class='linenum'>  210</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>don't reinvent the wheel, check the built in api
+</span><span class='linenum'>  211</span> <span class="meta meta_function meta_function_method meta_function_method_with-arguments meta_function_method_with-arguments_ruby"><span class="keyword keyword_control keyword_control_def keyword_control_def_ruby">def</span> <span class="entity entity_name entity_name_function entity_name_function_ruby">stringify_array</span><span class="punctuation punctuation_definition punctuation_definition_parameters punctuation_definition_parameters_ruby">(</span><span class="variable variable_parameter variable_parameter_function variable_parameter_function_ruby">an_array</span><span class="punctuation punctuation_definition punctuation_definition_parameters punctuation_definition_parameters_ruby">)</span></span>
+<span class='linenum'>  212</span>   a_string <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>
+<span class='linenum'>  213</span>   <span class="keyword keyword_control keyword_control_ruby">for</span> element <span class="keyword keyword_control keyword_control_ruby">in</span> an_array
+<span class='linenum'>  214</span>     <span class="keyword keyword_control keyword_control_ruby">if</span> a_string<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>size <span class="keyword keyword_operator keyword_operator_comparison keyword_operator_comparison_ruby">&gt;</span> <span class="constant constant_numeric constant_numeric_ruby">0</span>
+<span class='linenum'>  215</span>       a_string <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_augmented keyword_operator_assignment_augmented_ruby">+=</span> <span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>, <span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span>
+<span class='linenum'>  216</span>     <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>  217</span>     a_string <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_augmented keyword_operator_assignment_augmented_ruby">+=</span> element<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>to_s
+<span class='linenum'>  218</span>   <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>  219</span>   <span class="keyword keyword_control keyword_control_pseudo-method keyword_control_pseudo-method_ruby">return</span> a_string
+<span class='linenum'>  220</span> <span class="keyword keyword_control keyword_control_ruby">end</span>
+<span class='linenum'>  221</span> 
+<span class='linenum'>  222</span> some_array <span class="keyword keyword_operator keyword_operator_assignment keyword_operator_assignment_ruby">=</span> <span class="string string_quoted string_quoted_other string_quoted_other_literal string_quoted_other_literal_lower string_quoted_other_literal_lower_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">%w(</span>hello there buddy<span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">)</span></span>
+<span class='linenum'>  223</span> puts stringify_array<span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">(</span>some_array<span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">)</span>
+<span class='linenum'>  224</span> 
+<span class='linenum'>  225</span> <span class="comment comment_line comment_line_number-sign comment_line_number-sign_ruby"><span class="punctuation punctuation_definition punctuation_definition_comment punctuation_definition_comment_ruby">#</span>join gives us exactly what we need
+</span><span class='linenum'>  226</span> puts some_array<span class="punctuation punctuation_separator punctuation_separator_method punctuation_separator_method_ruby">.</span>join<span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">(</span><span class="string string_quoted string_quoted_double string_quoted_double_ruby"><span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_begin punctuation_definition_string_begin_ruby">"</span>, <span class="punctuation punctuation_definition punctuation_definition_string punctuation_definition_string_end punctuation_definition_string_end_ruby">"</span></span><span class="punctuation punctuation_section punctuation_section_function punctuation_section_function_ruby">)</span>
+<span class='linenum'>  227</span> 
+<span class='linenum'>  228</span> 
+</span><span class='linenum'>  229</span> </pre>
+</body>
+</html>

@@ -1,0 +1,12 @@
+Class Methods
+A class method is a method that is associated with a class but not an instance of a class.  You can call class methods by using the <name of the class> dot <method name> (ClassName.method_name).  Class methods may also be called static methods.
+You send a message (method) to a class instead of an instance of an object.  You create a class method when it does not make sense for an instance to have such a method.  Class methods are usually generic not specific to an instance.  For example, "new" is generic and called from the class itself - SomeClass.new
+
+
+
+Class variables
+A shared variable among all instances of a class, so only one copy of a class variable exists for a given class.  They are prefixed with two @ signs as opposed to one @ for an instance variable.
+
+Modules
+A module is like a class but it cannot be instantiated like a class.  Huh?  That's not cool.  We can include (mixin) methods and constants from a module into other classes to make them more feature rich. You'll see the more complex our class structures get we can alleviate that by designing flexibly with modules.
+We can also use modules to namespace our classes or other modules but we won't use those as much here.

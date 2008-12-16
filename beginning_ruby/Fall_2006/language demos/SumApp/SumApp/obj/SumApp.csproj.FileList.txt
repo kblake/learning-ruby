@@ -1,0 +1,8 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\SumApp.Form1.resources
+obj\Debug\SumApp.Properties.Resources.resources
+obj\Debug\SumApp.csproj.GenerateResource.Cache
+bin\Debug\SumApp.exe
+bin\Debug\SumApp.pdb
+obj\Debug\SumApp.exe
+obj\Debug\SumApp.pdb

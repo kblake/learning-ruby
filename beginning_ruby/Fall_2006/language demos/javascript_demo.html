@@ -1,0 +1,20 @@
+<html>
+	<head><title>JavaScript Demo</title></head>
+	<body>
+		<script language="javascript" type="text/javascript">
+			function get_sum(num1,num2)
+			{
+				return num1 + num2	
+			}		
+			go = true
+			while (go == true)
+			{
+				num1 = parseInt(prompt("Enter number 1"))
+				num2 = parseInt(prompt("Enter number 2"))
+				alert("The sum of your numbers is: " + get_sum(num1,num2))
+				go = confirm("Do you want to go again?")
+			}
+			
+		</script>
+	</body>
+</html>

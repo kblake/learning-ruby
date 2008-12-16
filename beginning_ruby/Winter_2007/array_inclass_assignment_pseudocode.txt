@@ -1,0 +1,15 @@
+pseudo code
+
+declare an array of 3 names
+loop while user enters 'y' or 'yes'
+	prompt for menu input(view all, view first, view last, add name)
+	#menu idea: 1 - view all, 2 - view first, etc.  
+	if input is 1 then view all
+	if input is 2 then view first
+	if input is 3 then view last
+	if input is 4 then
+		prompt user for name and get name from them
+		and then append name to array
+	keep looping?
+	get input from user
+end loop

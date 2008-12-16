@@ -1,0 +1,171 @@
+JAVA:
+
+public class LearnJava {
+	public static void main(String[] args) {
+		System.out.println("Learn Java" + " now");
+	}
+
+}
+
+RUBY:
+
+puts 'learn ruby' + ' now'
+
+---------------------------------------------------------------
+
+JAVA:
+
+public class LearnJava {
+	public static void main(String[] args) {
+		int sides = 3;
+		System.out.println("A triangle has " + sides + " sides.");
+		sides = 4;
+		System.out.println("A quadralateral has " + sides + " sides");
+	}
+}
+
+RUBY:
+
+sides = 3
+puts "A triangle has #{sides} sides"
+sides = 4
+puts "A quadralateral has #{sides} sides"
+
+---------------------------------------------------------------
+
+JAVA: 
+
+public class LearnJava {
+	public static void main(String[] args) {
+		int num = 10;
+		char c = 'a';
+		String name = "John";
+		double taxRate = 3.234;
+		boolean isRich = false;
+	}
+}
+RUBY:
+
+num = 10
+c = 'a'
+name = "John"
+taxRate = 3.234
+isRich = false
+
+#actually, variables are not bound to one type
+num = "Doe"
+---------------------------------------------------------------
+
+JAVA: 
+
+public class LearnJava {
+	public static void main(String[] args) {
+		final int BASE = 32;
+		final double CONVERSION_FACTOR = 9.0/5.0;
+		double fahrenheitTemp;
+		int celsiusTemp = 24;
+		fahrenheitTemp = celsiusTemp * CONVERSION_FACTOR + BASE;
+		System.out.println("Celsius Temperature: " + celsiusTemp);
+		System.out.println("Fahrenheit Equivalent: " + fahrenheitTemp);
+	}
+}
+
+RUBY:
+
+BASE = 32
+CONVERSION_FACTOR = 9.0/5.0
+celsius_temp = 24
+fahrenheit_temp = celsius_temp * CONVERSION_FACTOR + BASE
+puts "Celsius Temperature: #{celsius_temp}"
+puts "Fahrenheit Equivalent: #{fahrenheit_temp}"
+
+---------------------------------------------------------------
+
+JAVA: 
+
+import java.util.Scanner;
+public class LearnJava {
+	public static void main(String[] args) {
+		String message;
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter a line of text");
+		message = scan.nextLine();
+		System.out.println("You entered: '" + message + "'");
+	}
+}
+
+RUBY:
+
+puts "Enter a line of text"
+message = gets.chomp
+puts "You entered: '#{message}'"
+
+---------------------------------------------------------------
+
+JAVA: 
+
+import java.util.Scanner;
+public class LearnJava {
+	public static void main(String[] args) {
+		int miles;
+		double gallons, mpg;
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the number of miles: ");
+		miles = scan.nextInt();
+		System.out.println("Enter the gallons of fuel used: ");
+		gallons = scan.nextDouble();
+		mpg = miles/gallons;
+		System.out.println("Miles Per Gallon: " + mpg);
+	}
+}
+
+RUBY:
+
+puts "Enter the number of miles: "
+miles = gets.chomp.to_i
+puts "Enter the gallons of fuel used: "
+gallons = gets.chomp.to_f
+mpg = miles/gallons
+puts "Miles Per Gallon: #{mpg}"
+
+---------------------------------------------------------------
+
+JAVA: 
+
+public class LearnJava {
+	public static void main(String[] args) {
+		String phrase = "Change is inevitable";
+		System.out.println("Original string: " + phrase);
+		System.out.println("Length of string: " + phrase.length());
+		System.out.println("Uppercase string: " + phrase.toUpperCase());
+		System.out.println("Substring: " + phrase.substring(3,10));
+	}
+}
+
+
+RUBY:
+
+phrase = "Change is inevitable";
+puts "Original string: #{phrase}"
+puts "Length of string: #{phrase.length}"
+puts "Uppercase string: #{phrase.upcase}"
+puts "Substring: #{phrase[3..9]}"
+
+MORE RUBY STRING STUFF:
+
+puts "Hello " * 5
+puts "Reverse: #{phrase.reverse}"
+
+
+---------------------------------------------------------------
+
+JAVA: 
+
+RUBY:
+
+---------------------------------------------------------------
+
+JAVA: 
+
+RUBY:
+
